@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/perdidos.css">
+    <script type="text/javascript" src = "../javascript/perdidos.js"></script>
+    <title>Busca - Perdidos</title>
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
+        <a class="navbar-brand" href="#"> <img src="../image/LOGOTIPO3.png" height="40" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="home.html">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="perdidos.html">Perdidos</a>
+            <a class="nav-item nav-link active" href="encontrados.html">Encontrados</a>
+            <a class="nav-item nav-link active" href="sobrenos.html">Sobre Nós</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" >
+          <div class="navbar-nav ml-auto">
+            <a class="btn btn-success mx-1 tamanhoButton" href="login.html">Entrar</a>
+            <a class="btn btn-success  mx-1 tamanhoButton" href="cadastro.html">Cadastrar</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="busca">
+      <div class="areaBusca">
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" id = "groupButton">
+          <label class="btn btn-secondary  tamanhoButton active">
+            <input type="radio" name="options" id="cachorro" autocomplete="off" checked> Cachorro
+          </label>
+          <label class="btn btn-secondary tamanhoButton">
+            <input type="radio" name="options" id="gato" autocomplete="off"> Gato
+          </label>
+        </div>
+        
+        <div class="formFlex">
+          <select class="form-control" id="selectRaca">
+            <option disabled selected hidden>Raça</option>
+            <option>Vira-Lata</option>
+            <option>Pastor Alemão</option>
+            <option>Doberman</option>
+            <option>Pastor Belga</option>
+            <option>Pinscher</option>
+            <option>Rottweiler</option>
+          </select>
+  
+          <select class="form-control" id="selectPelo">
+            <option disabled selected hidden>Cor do Pelo</option>
+            <option>Preto</option>
+            <option>Castanho</option>
+            <option>Bege</option>
+            <option>Branco</option>
+            <option>Cinza</option>
+            <option>Dourado</option>
+          </select>
+  
+          <select class="form-control"  id="selectPorte">
+            <option disabled selected hidden>Porte</option>
+            <option>Pequeno</option>
+            <option>Médio</option>
+            <option>Grande</option>
+          </select>
+        </div>
+
+        <div>
+          <a class="btn btn-success" href="#" id="filtrar">Filtrar</a>
+        </div>
+      </div>
+    </div>
+
+
+    <main>
+      <div class="resultado">
+        <div class="item">
+          <div class="conteudo">
+            <div class="imagem">
+              <img src="../image/dog.jpg" alt="">
+            </div>
+            <div class="info">
+              <div class="tags">
+                <div class="raca"><span>Vira-Lata</span></div>
+                <div class="cor"><span>Branco</span></div>
+                <div class="porte"><span>Grande</span></div>
+              </div>
+              <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
+              <div class="mais">
+                <div class="local"><span>São Paulo, SP</span></div>
+                <div class="data"><span>17/05/2020</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="conteudo">
+            <div class="imagem">
+              <img src="../image/dog.jpg" alt="">
+            </div>
+            <div class="info">
+              <div class="tags">
+                <div class="raca"><span>Vira-Lata</span></div>
+                <div class="cor"><span>Branco</span></div>
+                <div class="porte"><span>Grande</span></div>
+              </div>
+              <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
+              <div class="mais">
+                <div class="local"><span>São Paulo, SP</span></div>
+                <div class="data"><span>17/05/2020</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="conteudo">
+            <div class="imagem">
+              <img src="../image/dog.jpg" alt="">
+            </div>
+            <div class="info">
+              <div class="tags">
+                <div class="raca"><span>Vira-Lata</span></div>
+                <div class="cor"><span>Branco</span></div>
+                <div class="porte"><span>Grande</span></div>
+              </div>
+              <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
+              <div class="mais">
+                <div class="local"><span>São Paulo, SP</span></div>
+                <div class="data"><span>17/05/2020</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="conteudo">
+            <div class="imagem">
+              <img src="../image/dog.jpg" alt="">
+            </div>
+            <div class="info">
+              <div class="tags">
+                <div class="raca"><span>Vira-Lata</span></div>
+                <div class="cor"><span>Branco</span></div>
+                <div class="porte"><span>Grande</span></div>
+              </div>
+              <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
+              <div class="mais">
+                <div class="local"><span>São Paulo, SP</span></div>
+                <div class="data"><span>17/05/2020</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="conteudo">
+            <div class="imagem">
+              <img src="../image/dog.jpg" alt="">
+            </div>
+            <div class="info">
+              <div class="tags">
+                <div class="raca"><span>Vira-Lata</span></div>
+                <div class="cor"><span>Branco</span></div>
+                <div class="porte"><span>Grande</span></div>
+              </div>
+              <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
+              <div class="mais">
+                <div class="local"><span>São Paulo, SP</span></div>
+                <div class="data"><span>17/05/2020</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="conteudo">
+            <div class="imagem">
+              <img src="../image/dog.jpg" alt="">
+            </div>
+            <div class="info">
+              <div class="tags">
+                <div class="raca"><span>Vira-Lata</span></div>
+                <div class="cor"><span>Branco</span></div>
+                <div class="porte"><span>Grande</span></div>
+              </div>
+              <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
+              <div class="mais">
+                <div class="local"><span>São Paulo, SP</span></div>
+                <div class="data"><span>17/05/2020</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="conteudo">
+            <div class="imagem">
+              <img src="../image/dog.jpg" alt="">
+            </div>
+            <div class="info">
+              <div class="tags">
+                <div class="raca"><span>Vira-Lata</span></div>
+                <div class="cor"><span>Branco</span></div>
+                <div class="porte"><span>Grande</span></div>
+              </div>
+              <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
+              <div class="mais">
+                <div class="local"><span>São Paulo, SP</span></div>
+                <div class="data"><span>17/05/2020</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
