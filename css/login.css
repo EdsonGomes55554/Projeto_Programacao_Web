@@ -1,0 +1,97 @@
+/*.bg-green {
+background-color: #00e676!important;
+}*/
+
+/*a.bg-light:hover, a.bg-light:focus,
+button.bg-light:hover,
+button.bg-light:focus {
+  background-color: #00fa2e !important;
+}*/
+body{
+    background-color: black;
+}
+
+.tamanhoButton{
+    width: 100px;
+}
+
+.inicio{
+    width: 100%;
+    height: 770px;
+    margin-bottom: 30px;
+}
+
+.jumbo {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    color: white;
+    height: 770px;
+    display: flex;
+}
+
+.areaFormulario{
+    width: 35%;
+    height: 770px;
+    z-index: 10;
+    margin: 0px auto;
+}
+
+.fundoCadastro{
+    background: linear-gradient(
+        rgba(204, 204, 204, 0.3), 
+       rgba(204, 204, 204, 0.3)
+      );
+
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;   
+    max-width: 400px;
+}
+
+.fundoCadastro >h5{
+    margin-bottom: 50px;
+    font-size: 35px;
+
+}
+
+.formulario{
+    margin-top: 10px;
+    min-width: 200px;
+    width: 80%;
+    margin: auto;
+}
+
+.fundoPrincipal{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-image: url(../image/catfinal.png);
+    background-blend-mode: color;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -2;
+}
+
+
+
+@media (max-width: 991px){
+    .fundoPrincipal{
+        display: none;
+    }
+    .areaFormulario{
+        margin:auto;
+        width: 100%;
+        height: 770px;
+        background-color: rgba(0, 0, 0, 0.1) !important;
+        background-image: url(../image/catfinal.png);
+        background-blend-mode: color;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
