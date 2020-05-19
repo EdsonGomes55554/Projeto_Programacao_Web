@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: #343a40;
 }
 
 .tamanhoButton{
@@ -58,7 +58,6 @@ main{
 }
 
 .resultado{
-    left: 0;
     width: 850px;
     background-color: white;
 }
@@ -130,6 +129,27 @@ main{
 
 .item:hover{
     background-color:  rgba(204,204,204, 0.35);
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #343a40;
+    color: white;
+    padding: 5px;
+}
+
+footer .titulo{
+    font-size: 1rem;
+    margin: 10px;
+}
+
+footer p{
+    margin: 0px;
+}
+
+footer .resto{
+    font-size: 0.7rem;
 }
 
 @media (max-width: 991px){
