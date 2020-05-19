@@ -1,9 +1,10 @@
 window.addEventListener("load", function() {
     let json = [{"email":"a@gmail.com", "senha":"123"}, {"email":"teste@gmail.com", "senha":"senha"}];
     let contas = JSON.parse(JSON.stringify(json));
-    let btnEntrar = document.getElementById("btnEntrar");
+    let formLogin = document.getElementById("formLogin");
+    
 
-    function entrar() {
+    let teste = function entrar() {
         let usuario = document.getElementById("email").value;
         let senha = document.getElementById("senha").value;
         let contaValida = false;
@@ -11,14 +12,19 @@ window.addEventListener("load", function() {
         contas.forEach(conta => {
             if (conta.email == usuario && conta.senha == senha) {
                 contaValida = true;
-                btnEntrar.setAttribute("href", "../html/home.html");
+                sessionStorage.setItem('status','loggedIn');
             }
         });
-        
-        if(!contaValida) {
+
+        return contaValida;
+    }
+
+    
+    
+    formLogin.addEventListener("submit", function(e) {
+        if(teste() == false) {
+            e.preventDefault();
             alert("Por favor cheque se o seu email ou senha foram inseridos corretamente.");
         }
-    }
-    
-    btnEntrar.addEventListener("click", entrar);
+    });
 });

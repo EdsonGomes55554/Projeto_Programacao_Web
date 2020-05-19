@@ -38,8 +38,11 @@ window.addEventListener("load", function() {
     AtualizaSelect(racasCachorros, "#selectRaca", "Raça");
     AtualizaSelect(corCachorros, "#selectCor", "Cor");
     AtualizaSelect(porteCachorros, "#selectPorte", "Porte");
-    trocarAnimal("cachorro");
     centralizarMapa("Rua Waldemar Martins Ferreira, 425, São Bernardo do Campo");
+    trocarAnimal("cachorro");
+
+
+    
 
     function limpar(elemento) {
         let node = document.querySelector(elemento);
@@ -70,12 +73,13 @@ window.addEventListener("load", function() {
                             nodeNovo.querySelector(".mais .local span").innerHTML = animal.local;
                             resultado.appendChild(nodeNovo);
 
-                            adicionarMarker(animal.local);
+                            criarMarker(animal.local);
                         }
                     }
                 }
             }
         });
+        adicionarMarkers();
     }
 
     function trocarAnimal(especie) {
@@ -94,7 +98,7 @@ window.addEventListener("load", function() {
         });
     }
 
-    function adicionarMarker(address) {
+    function criarMarker(address) {
         let geocoder = new google.maps.Geocoder();
         geocoder.geocode({'address': address}, function(results, status) {
             if (status === google.maps.GeocoderStatus.OK) {
@@ -103,11 +107,17 @@ window.addEventListener("load", function() {
                     map: map,
                     title: address
                 });
-                marker.setMap(map);
+                console.log(map);
                 markers.push(marker);
             } else {
               alert('Geocode was not successful for the following reason: ' + status);
             }
+        });
+    }
+
+    function adicionarMarkers() {
+        markers.forEach(marker => {
+            marker.setMap(map);
         });
     }
 
