@@ -13,8 +13,8 @@
   </head>
   <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
-        <a class="navbar-brand" href="#"> <img src="LOGOTIPO3.png" height="40" ></a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
+        <a class="navbar-brand" href="#"> <img src="../image/LOGOTIPO3.png" height="40" ></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,11 +26,25 @@
             <a class="nav-item nav-link active" href="sobrenos.html">Sobre Nós</a>
           </div>
         </div>
-        <div class="collapse navbar-collapse" >
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"  >
           <div class="navbar-nav ml-auto">
-            <a class="btn btn-success mx-1 tamanhoButton" href="login.html">Entrar</a>
-            <a class="btn btn-success  mx-1 tamanhoButton" href="cadastro.html">Cadastrar</a>
-          </div>
+            <div id = "areaNaoLogado" hidden>
+              <a class="btn btn-success mx-1 tamanhoButton" href="login.html">Entrar</a>
+              <a class="btn btn-success  mx-1 tamanhoButton" href="cadastro.html">Cadastrar</a>
+            </div>
+          <li class="nav-item dropdown" id="areaLogado" hidden>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-default"
+              aria-labelledby="navbarDropdownMenuLink-333">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
         </div>
       </nav>
     </header>
@@ -65,10 +79,18 @@
         </div>
       </main>
     
+      <footer>
+        <div class="text-center">
+          <p class="lead titulo"> Projeto de Programação para Web</p>
+          <p class="lead resto"> Edson Gomes e Rafael Matos</p>
+          <p class="lead resto"> Todos os direitos reservados ©</p>
+        </div>
+      </footer>
     
       
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src = "../javascript/loggedIn.js"></script>
   </body>
 </html>
