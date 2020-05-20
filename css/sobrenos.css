@@ -64,7 +64,7 @@ body{
 .fundoPrincipal{
     margin-left: 34.5%;
     background-color: rgba(0, 0, 0, 0.2) !important;
-    background-image: url(../image/undraw_good_doggy_4wfq.svg);
+    background-image: url("../image/undraw_good_doggy_4wfq.svg");
     background-blend-mode: color;
     background-color: black;
     width: 66%;
@@ -121,7 +121,7 @@ footer .resto{
       width: 100%;
       height: 770px;
       background-color: rgba(0, 0, 0, 0.1) !important;
-      background-image: url(undraw_good_doggy_4wfq.svg);
+      background-image: url("../image/undraw_good_doggy_4wfq.svg");
       background-blend-mode: color;
       background-position: center;
       background-repeat: no-repeat;

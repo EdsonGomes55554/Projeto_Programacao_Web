@@ -69,16 +69,35 @@ body{
     border-radius: 20px;
 }
 
-.conteudo{
-    background: linear-gradient(#cccccc , white);
-    height: 1000px;
-    width: 100%;
-    clip-path: polygon(0% 0%, 100% 35px, 100% 100%, 0% 100%);
-    padding: 100px 50px;
-}
 main{
     background-color: black;
     padding-top: 30px;
+}
+
+.conteudo{
+    background: linear-gradient(#cccccc , white);
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 35px, 100% 100%, 0% 100%);
+    padding: 100px 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#imagem{
+    background-color: blueviolet;
+}
+
+#imagem img{
+    width: 50%;
+    height: 100%;
+    max-width: 500px;
+    object-fit: none;
+    height: 400px;
+}
+
+#texto{
+    background-color: blue;
+    width: 50%;
 }
 footer{
     width: 100%;
