@@ -1,4 +1,6 @@
 window.addEventListener("load", function() {
+    let btnSair = document.getElementById("sair");
+
     if (sessionStorage.getItem('status') != null) {
         let areaLogado = document.getElementById("areaLogado");
         areaLogado.hidden = false;
@@ -6,4 +8,11 @@ window.addEventListener("load", function() {
         let areaNaoLogado = document.getElementById("areaNaoLogado");
         areaNaoLogado.hidden = false;
     }
+
+    function sair() {
+        sessionStorage.removeItem('status');
+        window.location.reload(true);
+    }
+
+    btnSair.addEventListener("click", sair);
 });
