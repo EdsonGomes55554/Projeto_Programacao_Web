@@ -1,0 +1,35 @@
+:root{
+    font-size: 16px;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    --heroHeight: 900px;
+}
+
+body{
+    background-color: #343a40;
+}
+
+.tamanhoButton{
+    width: 100px;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #343a40;
+    color: white;
+    padding: 5px;
+}
+
+footer .titulo{
+    font-size: 1rem;
+    margin: 10px;
+}
+
+footer p{
+    margin: 0px;
+}
+
+footer .resto{
+    font-size: 0.7rem;
+}
