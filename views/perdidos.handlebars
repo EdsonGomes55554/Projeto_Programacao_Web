@@ -1,0 +1,77 @@
+{{#section 'head'}}
+    <title>Perdidos</title>
+{{/section}}
+
+<body>
+  <link rel="stylesheet" href="static/perdidos.css">
+  <div class="busca">
+    <div class="areaBusca">
+
+      <div class="btn-group btn-group-toggle" data-toggle="buttons" id = "groupButton">
+        <label class="btn btn-secondary  tamanhoButton active">
+          <input type="radio" name="options" id="cachorro" autocomplete="off" checked> Cachorro
+        </label>
+        <label class="btn btn-secondary tamanhoButton">
+          <input type="radio" name="options" id="gato" autocomplete="off"> Gato
+        </label>
+      </div>
+      
+      <div class="formFlex">
+        <select class="form-control" id="selectRaca">
+          <option disabled selected hidden>Raça</option>
+        </select>
+
+        <select class="form-control" id="selectCor">
+          <option disabled selected hidden>Cor do Pelo</option>
+        </select>
+
+        <select class="form-control"  id="selectPorte">
+          <option disabled selected hidden>Porte</option>
+        </select>
+      </div>
+
+      <div>
+        <a class="btn btn-success" href="#" id="filtrar">Filtrar</a>
+      </div>
+    </div>
+  </div>
+
+
+  <main>
+    <div class="resultado">
+      <div class="item">
+        <div class="conteudo">
+          <div class="imagem">
+            <img src="static/dog.jpg" alt="">
+          </div>
+          <div class="info">
+            <div class="tags">
+              <div class="raca"><span>Vira-Lata</span></div>
+              <div class="cor"><span>Branco</span></div>
+              <div class="porte"><span>Grande</span></div>
+            </div>
+            <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
+            <div class="mais">
+              <div class="local"><span>São Paulo, SP</span></div>
+              <div class="data"><span>17/05/2020</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfyzephIQTy7vK5BTgV-RvwEZsViGAQck&callback=initMap"
+    async defer></script>
+  </main>
+    
+  <script type="text/javascript" src = "static/perdidos.js"></script>
+</body>

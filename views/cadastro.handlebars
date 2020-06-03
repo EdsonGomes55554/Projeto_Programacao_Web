@@ -1,0 +1,53 @@
+{{#section 'head'}}
+    <link rel="stylesheet" href="static/login.css">
+    <title>Cadastro</title>
+{{/section}}
+
+<main class="inicio">
+  <div class="areaFormulario">
+    <section class="jumbo text-center">
+        <div class="fundoCadastro text-center">
+        <h5>Cadastro</h5>
+        <form class="formulario my-3" id="formCadastro" action="/cadastro" method="post">
+          <div class="form-group">
+            <input name="nome" type="nome" class="form-control" id="nome" placeholder="Nome" aria-describedby="emailHelp" required>
+          </div>
+          <div class="form-group">
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp" required>
+          </div>
+          <div class="form-group">
+            <input name="telefone" type="telefone" placeholder="Telefone" class="form-control" id="tekefibe" required>
+          </div>
+          <div class="form-group">
+            <input name="senha" type="password" placeholder="Senha" class="form-control" id="senha" required>
+          </div>
+          <div class="form-group">
+            <input name="confirmeSenha" type="password" placeholder="Confirme a Senha" class="form-control" id="confirmaSenha" required>
+          </div>
+          <button type="submit" class="btn btn-success tamanhoButton my-1">Cadastrar</button>
+        </form>
+    </section>
+  </div>
+</main>
+
+{{#if sucesso}}
+  <div class="alert alert-success" role="alert">
+    Cadastro efetuado com sucesso!
+  </div>
+  {{else}}
+  {{#if falha}}
+    <div class="alert alert-danger" role="alert">
+      A senha e sua confirmação são diferentes.
+    </div>
+    {{else}}
+    {{#if error}}
+      <div class="alert alert-danger" role="alert">
+        Email já cadastrado.
+      </div>
+    {{/if}}
+  {{/if}}
+{{/if}}
+
+
+<script type="text/javascript" src = "static/cadastro.js"></script>
+
