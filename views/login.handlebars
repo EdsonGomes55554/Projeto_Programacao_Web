@@ -1,38 +1,37 @@
 {{#section 'head'}}
-    <link rel="stylesheet" href="static/login.css">
+    <link rel="stylesheet" href="/static/login.css">
     <title>Login</title>
 {{/section}}
-  <main class="inicio">
-      <div class="fundoPrincipal">
-      </div>
-      <div class="areaFormulario">
-        <section class="jumbo text-center">
-            <div class="fundoCadastro text-center">
-            <h5>Login</h5>
-            <form class="formulario my-3" action="/login" method="post" id = "formLogin">
-              <div class="form-group">
-                <input name="email" type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp" required>
-              </div>
-              <div class="form-group">
-                <input name="senha" type="password" placeholder="Senha" class="form-control" id="senha" required>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="lembrar">
-                <label class="form-check-label branco" for="lembrar">Lembrar-me!</label>
-              </div>
-              <button type="submit" class="btn btn-success tamanhoButton my-1" id = "btnEntrar">Entrar</button>
-              <div>
-                  <a href = "#">Esqueci minha senha!</a>
-              </div>
-            </form>
-        </section>
-      </div>
-    </main>
+<main class="inicio">
+  <div class="fundoPrincipal">
+  </div>
+  <div class="areaFormulario">
+    <section class="jumbo text-center">
+        <div class="fundoCadastro text-center">
+        <h5>Login</h5>
+        <form class="formulario my-3" action="/login" method="post" id = "formLogin">
+          <div class="form-group">
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp" required>
+          </div>
+          <div class="form-group">
+            <input name="senha" type="password" placeholder="Senha" class="form-control" id="senha" required>
+          </div>
+          <button type="submit" class="btn btn-success tamanhoButton my-1" id = "btnEntrar">Entrar</button>
+          <div>
+              <a href = "#">Esqueci minha senha!</a>
+          </div>
+        </form>
+    </section>
+  </div>
+</main>
 
-    {{#if falha}}
-    <div class="alert alert-danger" role="alert">
-      Usuário ou senha incorreto.
-    </div>
-    {{/if}}
+{{#if falha}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  Email e senha incorretos.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
   
   <!-- <script type="text/javascript" src = "static/login.js"></script> -->

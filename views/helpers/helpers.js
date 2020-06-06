@@ -4,7 +4,12 @@ function section(name, options){
     return null;
 }
 
+function isNull(variavel) {
+    return variavel == null;
+}
+
 
 module.exports = {
-    section: section
+    section: section,
+    isNull: isNull
 }

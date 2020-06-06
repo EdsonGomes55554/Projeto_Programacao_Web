@@ -1,64 +1,100 @@
 {{#section 'head'}}
-    <link type="text/css" rel="stylesheet" href="static/index.css">
+    <link type="text/css" rel="stylesheet" href="/static/index.css">
     <title>Home</title>
 {{/section}}
 
-<body>
-  <div class="hero">
-    <div class="fundoPrincipal">
-    </div>
-    <div class="areaFormulario">
-      <section class="jumbo text-center">
-          <h2>Ajude um animal perdido a encontrar seu lar.</h2>
-          <h5 class="lead my-3">Busque por pets e ajude seus donos.</h5>
-          <div class="fundoCadastro">
-          <h5>Login</h5>
-          <form class="formulario my-3" id="formLogin">
-            <div class="form-group">
-              <input type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Senha" class="form-control" id="senha">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Lembrar-me!</label>
-            </div>
-            <button type="submit" class="btn btn-success tamanhoButton my-1">Entrar</button>
-          </form>
-          <div id="separadorForm"></div>
-          <h5>Comece agora!</h5>
-          <form class="formulario my-3" id="formCadastro">
-            <div class="form-group">
-              <input type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-              <input type="input" placeholder="Nome" class="form-control" id="nome">
-            </div>
-            <div class="form-group">
-              <input type="telefone" placeholder="Telefone" class="form-control" id="tekefibe">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Senha" class="form-control" id="senha">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Confirme a Senha" class="form-control" id="confirmaSenha">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Concordo com os <a href="#">termos de uso</a>.</label>
-            </div>
-            <button type="submit" class="btn btn-success tamanhoButton my-1">Cadastrar</button>
-          </form>
+{{#if sucesso}}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    Cadastro efetuado com sucesso!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {{/if}}
+
+<div class="hero">
+  <div class="fundoPrincipal">
+  </div>
+  <div class="areaFormulario">
+    <section class="jumbo text-center">
+      {{#if session.autenticado}}
+      <div class="fundoCadastro">
+        <h2 class="mt-5">Registre Animais</h2>
+        <h5 class="lead my-3 mb-5">Configure sua conta e registros além de ver possíveis pets que vocês busca com nossa ferramenta de busca.</h5>
+        <a href= "/perfil" class="btn btn-success tamanhoBotaoPerfil my-1 mb-5">Ir para perfil</a>
+        <div id="separadorForm"></div>
+        <h2 class="mt-5">Pesquise por animais</h2>
+        <h5 class="lead my-3 mb-5">Encontre animais achados ou perdidos disponíveis no sistema e descubra os contatos das pessoas que estão com o animal.</h5>
+        <a href="/perdidos" class="btn btn-success tamanhoBotaoPerfil my-1 mb-2">Ir para perdidos</a>
+        <a href="/encontrados" class="btn btn-success tamanhoBotaoPerfil my-1 mb-5">Ir para encontrados</a>
+      </div>
+      {{else}}
+        <h2>Ajude um animal perdido a encontrar seu lar.</h2>
+        <h5 class="lead my-3">Busque por pets e ajude seus donos.</h5>
+        <div class="fundoCadastro">
+        <h5>Login</h5>
+        <form class="formulario my-3"  action="/login" method="post" id="formLogin">
+          <div class="form-group">
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp">
           </div>
-      </section>
+          <div class="form-group">
+            <input name="senha" type="password" placeholder="Senha" class="form-control" id="senha">
+          </div>
+          <button type="submit" class="btn btn-success tamanhoButton my-1">Entrar</button>
+        </form>
+        <div id="separadorForm"></div>
+        <h5>Comece agora!</h5>
+        <form class="formulario my-3" action="/cadastroHome" method="post" id="formCadastro">
+          <div class="form-group">
+          <div class="form-group">
+            <input name="nome" type="input" placeholder="Nome" class="form-control" id="nome">
+          </div>
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <input name="telefone" type="telefone" placeholder="Telefone" class="form-control" id="tekefibe">
+          </div>
+          <div class="form-group">
+            <input name="senha" type="password" placeholder="Senha" class="form-control" id="senha">
+          </div>
+          <div class="form-group">
+            <input name="confirmeSenha" type="password" placeholder="Confirme a Senha" class="form-control" id="confirmaSenha">
+          </div>
+
+          <label>Ao clicar em cadastrar concordo com os <a href="#">termos de uso</a>.</label>
+          <button type="submit" class="btn btn-success tamanhoButton my-1">Cadastrar</button>
+        </form>
+        </div>
+        {{/if}}
+    </section>
+  </div>
+</div>
+
+<main>
+  <div class="conteudo">
+    <div class="mensagens">
+      <div class="imagemMain">
+        <img src="/static/dogHome.png">
+      </div>
+      <div class="aviso">
+        <h1 class="lead">
+          Cerca de 70% dos cães são encontrados com a ajuda de outras pessoas.
+          Cerca de 30% dos cães são encontrados entre 2 e 4 km de distância de sua casa.
+        </h1>
+      </div>
+    </div>
+
+    <div class="mensagens">
+      <div class="aviso">
+        <h1 class="lead">
+          Um dos maiores medos de quem é dono de pet é perder o seu animal de estimação. Quando o cãozinho foge ou se perde, o desespero se instala. Essa nova plataforma vai auxiliar nesse momento de apuros.
+        </h1>
+      </div>
+      <div class="imagemMain ml-5">
+        <img src="/static/chihuahua.jpg">
+      </div>
     </div>
   </div>
-  
-  <main>
-    <div class="conteudo">
-    </div>
-  </main>
-  
- <script type="text/javascript" src = "static/login.js"></script>
-</body>
+
+    
+</main>

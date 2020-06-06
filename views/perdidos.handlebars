@@ -3,75 +3,82 @@
 {{/section}}
 
 <body>
-  <link rel="stylesheet" href="static/perdidos.css">
-  <div class="busca">
+  <link rel="stylesheet" href="/static/perdidos.css">
+  <form class="busca" action="/perdidos/filtrar" method="get" id="formFiltrar">
     <div class="areaBusca">
 
       <div class="btn-group btn-group-toggle" data-toggle="buttons" id = "groupButton">
         <label class="btn btn-secondary  tamanhoButton active">
-          <input type="radio" name="options" id="cachorro" autocomplete="off" checked> Cachorro
+          <input name="optionsCachorro" type="radio" id="cachorro" autocomplete="off" {{#if cachorroSelecionado}}checked{{/if}}> Cachorro
         </label>
         <label class="btn btn-secondary tamanhoButton">
-          <input type="radio" name="options" id="gato" autocomplete="off"> Gato
+          <input name="optionsGato" type="radio" id="gato" autocomplete="off" {{#if cachorroSelecionado}}{{else}}checked{{/if}}> Gato
         </label>
       </div>
       
       <div class="formFlex">
-        <select class="form-control" id="selectRaca">
-          <option disabled selected hidden>Raça</option>
-        </select>
 
-        <select class="form-control" id="selectCor">
+        <select name = "selectCor" class="form-control" id="selectCor">
           <option disabled selected hidden>Cor do Pelo</option>
+          {{#each cor}}
+            <option>{{this}}</option>
+          {{/each}}
         </select>
 
-        <select class="form-control"  id="selectPorte">
+        <select name = "selectPorte" class="form-control"  id="selectPorte">
           <option disabled selected hidden>Porte</option>
+          {{#each porte}}
+            <option>{{this}}</option>
+          {{/each}}
         </select>
       </div>
 
       <div>
-        <a class="btn btn-success" href="#" id="filtrar">Filtrar</a>
+        <button type="submit" class="btn btn-success" href="#" id="filtrar">Filtrar</button>
       </div>
     </div>
-  </div>
+  </form>
 
 
   <main>
     <div class="resultado">
-      <div class="item">
-        <div class="conteudo">
-          <div class="imagem">
-            <img src="static/dog.jpg" alt="">
-          </div>
-          <div class="info">
-            <div class="tags">
-              <div class="raca"><span>Vira-Lata</span></div>
-              <div class="cor"><span>Branco</span></div>
-              <div class="porte"><span>Grande</span></div>
+      {{#each animais}}
+        <div class="item">
+          <div class="conteudo">
+            <div class="imagem">
+              <img src="/updates/{{this.foto}}" alt="">
             </div>
-            <div class="desc"><span>Exige muito de ti e espera pouco dos outros. Assim, evitarás muitos aborrecimentos.</span></div>
-            <div class="mais">
-              <div class="local"><span>São Paulo, SP</span></div>
-              <div class="data"><span>17/05/2020</span></div>
+            <div class="info">
+              <div class="tags">
+                <div class="cor"><span>{{this.cor}}</span></div>
+                <div class="porte"><span>{{this.porte}}</span></div>
+              </div>
+              <div class="desc"><span>{{this.desc}}</span></div>
+              <div class="mais">
+                <div id="local" class="local"><span>{{this.local}}</span></div>
+                <div class="data"><span>{{this.data}}</span></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      {{/each}}
     </div>
+    
     <div id="map"></div>
     <script>
+      //{{google}}();
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: {lat: -23.644, lng: -46.528},
+          zoom: 10
         });
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfyzephIQTy7vK5BTgV-RvwEZsViGAQck&callback=initMap"
     async defer></script>
   </main>
-    
-  <script type="text/javascript" src = "static/perdidos.js"></script>
+
+  <script type="text/javascript" src = "/static/googleMaps.js"></script>
+  <script type="text/javascript" src = "/static/perdidos.js"></script>
 </body>

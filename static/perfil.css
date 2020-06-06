@@ -13,29 +13,34 @@ body{
 }
 
 .conteudo{
-    width: 100%;
-    height: 1000px;
+    height: 100%;
     background-color: white;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: start;
+    align-items: flex-start;
 }
 
 .perfil{
+
+    height: 100vh;
+    display: block;
+    top: 0;
+    position: sticky !important;
+
+
+
     width: 350px;
-    height: 100%;
     background-color: rgb(241, 241, 241);
     border-top: 1px solid rgba(31, 31, 31, 0.2);
     border-bottom: 1px solid rgba(31, 31, 31, 0.2);
     border-right: 1px solid rgba(31, 31, 31, 0.1);
-
 }
 
 .acoes{
     width: calc(100% - 350px);
-    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-self: center;
 }
 
@@ -135,65 +140,52 @@ body{
 .formulario{
     margin: 100px auto;
     width: 600px;
-    height: 800px;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
+.tamanhoAcord{
+    width: 100%;
+}
+
 .tamanhoBotaoRegistro{
     width: 200px;
     margin: 30px auto;
 }
 
-.juncao{
-    display: flex;
-    justify-content: center;
+.blockAnimal{
+    display: grid;
+    column-gap: 5%;
+    grid-template-columns: 30% 30% 30%;
+    margin: 40px auto;
+    width: 90%;
 }
 
-.juncao .tamanhoBotaoRegistro{
-    margin: 30px 30px;
+.blockAnimal img{
+    object-fit: cover;
+    height: 300px;
 }
 
-footer{
-    width: 100%;
-    height: 100px;
-    background-color: #343a40;
-    color: white;
-    padding: 5px;
-}
-
-footer .titulo{
-    font-size: 1rem;
-    margin: 10px;
-}
-
-footer p{
-    margin: 0px;
-}
-
-footer .resto{
-    font-size: 0.7rem;
-}
 
 @media (max-width: 991px){
     .conteudo{
         flex-direction: column;
-        height: 1300px;
     }
     .perfil{
+        position: relative !important;
         width: 100%;
-        height: 500px;
+        height: 100%;
     }
     .acoes{
         width: 100%;
-        height: 1000px;
+        height: 100%;
     }
     .formulario{
-        margin: 20px 0px;
+        margin-top: 20px;
         width: 80%;
-        margin: 0px;
     }
-    .juncao{
-        flex-direction: column;
-        align-items: center;
+    .blockAnimal{
+        display: block;
+        width: 100%;
     }
 }

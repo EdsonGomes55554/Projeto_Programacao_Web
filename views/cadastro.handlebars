@@ -1,5 +1,5 @@
 {{#section 'head'}}
-    <link rel="stylesheet" href="static/login.css">
+    <link rel="stylesheet" href="/static/login.css">
     <title>Cadastro</title>
 {{/section}}
 
@@ -24,6 +24,7 @@
           <div class="form-group">
             <input name="confirmeSenha" type="password" placeholder="Confirme a Senha" class="form-control" id="confirmaSenha" required>
           </div>
+           <label class="branco">Ao clicar em cadastrar concordo com os <a href="#">termos de uso</a>.</label>
           <button type="submit" class="btn btn-success tamanhoButton my-1">Cadastrar</button>
         </form>
     </section>
@@ -31,23 +32,30 @@
 </main>
 
 {{#if sucesso}}
-  <div class="alert alert-success" role="alert">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
     Cadastro efetuado com sucesso!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
   {{else}}
   {{#if falha}}
-    <div class="alert alert-danger" role="alert">
-      A senha e sua confirmação são diferentes.
-    </div>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    A senha e sua confirmação são diferentes.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
     {{else}}
     {{#if error}}
-      <div class="alert alert-danger" role="alert">
-        Email já cadastrado.
-      </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      Email já cadastrado.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     {{/if}}
   {{/if}}
 {{/if}}
 
-
-<script type="text/javascript" src = "static/cadastro.js"></script>
 

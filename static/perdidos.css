@@ -15,11 +15,17 @@ body{
 main{
     display: flex;
     justify-content: start;
+    height: 100%;
 }
 
 #map{
     height: 1000px;
     width: calc(100% - 850px);
+    display: block;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky !important;
+    
 }
 
 .busca{
