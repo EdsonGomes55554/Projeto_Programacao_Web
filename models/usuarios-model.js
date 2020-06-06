@@ -27,16 +27,33 @@ function procurarEmailUnico(emailReq, callback){
 
 const UsuarioDAO = {};
 
+UsuarioDAO.toObj = (resposta) => {
+    const perfil = new perfilUsuario;{
+        resposta.nome,
+        resposta.telefone,
+        resposta.email,
+        resposta.senha,
+        resposta.medalhas
+    }
+    return perfil;
+}
+
+UsuarioDAO.toJSON = (perfil) => {
+    return{
+        nome: perfil.nome,
+        telefone: perfil.telefone,
+        email: perfil.email,
+        senha: perfil.senha,
+        medalhas: perfil.medalhas,
+    }
+}
+
 UsuarioDAO.inserir = (novoPerfil, callback) => {
     procurarEmailUnico(novoPerfil.email, (status) => {
         if(status === true){
             colecoes.usuarios.insertOne(novoPerfil, (err,res)=> {
                 if(err === null){
-                    const perfil = new perfilUsuario (res.nome,
-                                                      res.telefone,
-                                                      res.email,
-                                                      res.senha,
-                                                      res.medalhas);
+                    const perfil =  UsuarioDAO.toObj(res)
                     callback(perfil);
                 }else{
                     console.log("Erro na inserção");
@@ -50,22 +67,38 @@ UsuarioDAO.inserir = (novoPerfil, callback) => {
     });
 }
 
-UsuarioDAO.buscarUsuario = (senha, email, callback) => {
-    let dados = { email: email,
-                  senha: senha };
-    colecoes.usuarios.find(dados).toArray((err, res) => {
+UsuarioDAO.buscarUsuario = (dados, callback) => {
+    colecoes.usuarios.findOne(dados,(err, res) => {
         if(err !== null){
             callback(false);
             console.log("Não foi possivel buscar o Usuario.")
         }else{
-            if(res.length > 0){
-                callback(res[0]);
+            if(res !== null){
+                callback(res);
             }else{
                 callback(false);
             }
         }
     });
 }
+
+UsuarioDAO.atualizaUsuario = (dados, dadosAtuais, callback) => {
+    UsuarioDAO.buscarUsuario(dados, status =>{
+        if(status !== false){
+            colecoes.usuarios.updateOne({email : status.email}, { $set: dadosAtuais }, (err, res)=>{
+                if(err === null){
+                    callback(true);
+                }else{
+                    console.log("Não foi possível atualizar o Usuario.");
+                    callback(false);
+                }
+            });
+        }else{
+            callback(false);
+        }
+    })
+}
+
 
 module.exports = {
     perfilUsuario: perfilUsuario,
