@@ -1,5 +1,7 @@
 "use strict";
 
+global.__rootdir = __dirname;
+
 const express = require('express');
 const handlebars = require('express-handlebars');
 const path = require('path');
@@ -13,6 +15,7 @@ const rotas = require('./rotas');
 
 const app = express();
 
+
 app.listen(3000, ()=>{
     conexaoBanco.conectar(() => {
         console.log("Servidor Aberto");
@@ -20,18 +23,24 @@ app.listen(3000, ()=>{
 });
 
 const confhbs = handlebars.create({
-    helpers: {section: require('./views/helpers/helpers').section}
-})
+    helpers: {section: require('./views/helpers/helpers').section,
+              isNull: require('./views/helpers/helpers').isNull}
+});
+
 app.engine('handlebars', confhbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', path.resolve(__dirname, 'views'));
 
-app.use('/static', express.static(__dirname + '/static'));
+
+app.use('/static', express.static(path.join(__dirname, '/static')));
+
+app.use('/updates', express.static(path.join(__dirname, '/updates')));
 
 app.use(session({
     secret: confDB.sessionSegredo,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: conexaoBanco.sessionStore
 }));
 
 app.use((req, res, next) => {
