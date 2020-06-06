@@ -1,0 +1,26 @@
+
+<div class="blockAnimal">
+
+{{#each encontrados}}
+  <div class="card mb-3 tamanhoAnimal">
+    <img src="/updates/{{this.foto}}" class="card-img-top " alt="...">
+    <div class="card-body">
+      <p class="card-text">
+        <div>
+          Entre em contato: {{this.emailEncontrado}}
+        </div>
+        Descrição: {{this.desc}}
+      </p>
+      <div>
+        <a href="/perfil/matches/resolver?perdidoId={{this.perdidoId}}&emailPerdido={{this.emailPerdido}}&encontradoId={{this.encontradoId}}&emailEncontrado={{this.emailEncontrado}}" type="button" class="btn btn-success">Resolver</a>
+        <a href="/perfil/matches/remover?perdidoId={{this.perdidoId}}&emailPerdido={{this.emailPerdido}}&encontradoId={{this.encontradoId}}&emailEncontrado={{this.emailEncontrado}}" type="button" class="btn btn-danger">Deletar</a>
+      </div>
+    </div>
+  </div>
+{{/each}}
+
+</div>
+
+
+
+

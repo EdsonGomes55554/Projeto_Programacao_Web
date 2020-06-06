@@ -1,0 +1,109 @@
+<div class="accordion tamanhoAcord" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Modificar Nome 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+          <form class="formulario" action="/perfil/configuracao/alterarNome" method="post">
+            <div class="form-group">
+                <input name= "alterarNome" class="form-control" type="input" placeholder="Nome" id="nome">
+            </div>
+            <div class="form-group">
+                <input name= "senhaAlterarNome" class="form-control" type="password" placeholder="Senha" id="senha">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success tamanhoBotaoRegistro" type="submit" id="btnAtualizarDados">Atualizar nome</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Modifcar Telefone
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        
+        <form class="formulario" action="/perfil/configuracao/alterarTelefone" method="post">
+            <div class="form-group">
+                <input name= "alterarTelefone" class="form-control" type="input" placeholder="Telefone" id="nome">
+            </div>
+            <div class="form-group">
+                <input name= "senhaAlterarTelefone" class="form-control" type="password" placeholder="Senha" id="senha">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success tamanhoBotaoRegistro" type="submit" id="btnAtualizarDados">Atualizar telefone</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Modificar Senha
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        
+          <form class="formulario" action="/perfil/configuracao/alterarSenha" method="post">
+            <div class="form-group">
+                <input name= "alterarSenha" class="form-control" type="input" placeholder="Nova senha" id="nome">
+            </div>
+            <div class="form-group">
+                <input name= "senhaAlterarSenha" class="form-control" type="password" placeholder="Senha atual" id="senha">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success tamanhoBotaoRegistro" type="submit" id="btnAtualizarDados">Atualizar senha</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Modificar Foto
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        
+          <form class="formulario" action="/perfil/configuracao/alterarFoto" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input name="alterarFoto" type="file" class="btn btn-secondary form-control" data-show-preview="false">
+            </div>
+            <div class="form-group">
+                <input name= "senhaAlterarFoto" class="form-control" type="password" placeholder="Senha" id="senha">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success tamanhoBotaoRegistro" type="submit" id="btnAtualizarDados">Atualizar foto</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+    
+</div>

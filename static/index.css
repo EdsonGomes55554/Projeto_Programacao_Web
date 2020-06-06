@@ -1,0 +1,175 @@
+body{
+    background-color: #343a40;
+}
+
+.hero{
+    width: 100%;
+    height: var(--heroHeight);
+    background-color: black;
+}
+
+.tamanhoBotaoPerfil{
+    width: 200px;
+}
+
+.areaFormulario{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34%;
+    height: var(--heroHeight);
+    z-index: 10;
+}
+
+.jumbo {
+    padding: 2rem 0px;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.fundoCadastro{
+    background: linear-gradient(rgba(204, 204, 204, 0.1), rgba(204, 204, 204, 0.1));
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 400px;
+}
+
+.formulario{
+    margin-top: 10px;
+    min-width: 200px;
+    width: 80%;
+    margin: auto;
+}
+
+.fundoPrincipal{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-image: url(catfinal.png);
+    background-blend-mode: color;
+    width: 66%;
+    height: var(--heroHeight);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#separadorForm{
+    background-color: gray;
+    height: 1px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+main{
+    background-color: black;
+    padding-top: 30px;
+}
+
+.conteudo{
+    background: linear-gradient(#cccccc , white);
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 35px, 100% 100%, 0% 100%);
+}
+
+.mensagens{
+    padding: 100px 50px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 7%;
+}
+
+.mensagens:last-child{
+    padding-bottom: 100px;
+}
+
+#imagem{
+    background-color: blueviolet;
+}
+
+#imagem img{
+    width: 50%;
+    height: 100%;
+    max-width: 500px;
+    object-fit: none;
+    height: 400px;
+}
+
+#texto{
+    background-color: blue;
+    width: 50%;
+}
+
+.imagemMain {
+    height: 250px;
+    width: 250px;
+    display: block;
+    margin-right: 100px;
+    opacity: 0.8;
+}
+
+.imagemMain img{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(to bottom,  #696e74,  #343a40);
+}
+
+.aviso{
+    width: calc(100% - 500px);
+}
+
+.aviso h1{
+    font-size: 1.5rem;
+}
+
+@media (max-width: 991px){
+
+    .jumbo {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+        color: white;
+        height: var(--heroHeight);
+    }
+
+    .fundoPrincipal{
+        display: none;
+    }
+    .areaFormulario{
+        margin:auto;
+        width: 100%;
+        height: var(--heroHeight);
+        background-color: rgba(0, 0, 0, 0.1) !important;
+        background-image: url(catfinal.png);
+        background-blend-mode: color;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .conteudo{
+        flex-direction: column;
+    }
+
+    .imagemMain {
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+
+    .aviso{
+        width: 100%;
+    }
+
+    .mensagens{
+        flex-direction: column;
+    }
+}

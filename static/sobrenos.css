@@ -1,0 +1,130 @@
+/*.bg-green {
+background-color: #00e676!important;
+}*/
+
+/*a.bg-light:hover, a.bg-light:focus,
+button.bg-light:hover,
+button.bg-light:focus {
+  background-color: #00fa2e !important;
+}*/
+body{
+    background-color: black;
+}
+
+.tamanhoButton{
+  width: 100px;
+}
+
+.inicio{
+  width: 100%;
+  height: 770px;
+  margin-bottom: 30px;
+}
+
+.jumbo {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+     rgba(0, 0, 0, 0.45)
+    );
+  color: white;
+  height: 770px;
+}
+
+.areaFormulario{
+  float: left;
+  width: 35%;
+  height: 770px;
+  z-index: 10;
+  background-color: black;
+}
+
+.fundoCadastro{
+  background: linear-gradient(
+      rgba(204, 204, 204, 0.1), 
+     rgba(204, 204, 204, 0.1)
+    );
+
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 400px;
+}
+
+.formulario{
+  margin-top: 10px;
+  min-width: 200px;
+  width: 80%;
+  margin: auto;
+}
+
+.fundoPrincipal{
+    margin-left: 34.5%;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-image: url("undraw_good_doggy_4wfq.svg");
+    background-blend-mode: color;
+    background-color: black;
+    width: 66%;
+    height: 770px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#separadorForm{
+  background-color: gray;
+  height: 1px;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.teste{
+  background: linear-gradient(#cccccc , white);
+  height: 1000px;
+  width: 100%;
+  clip-path: polygon(0% 0%, 100% 35px, 100% 100%, 0% 100%);
+  padding: 100px 50px;
+  
+}
+
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: #343a40;
+  color: white;
+  padding: 5px;
+}
+
+footer .titulo{
+  font-size: 1rem;
+  margin: 10px;
+}
+
+footer p{
+  margin: 0px;
+}
+
+footer .resto{
+  font-size: 0.7rem;
+}
+
+@media (max-width: 991px){
+  .fundoPrincipal{
+      display: none;
+  }
+  .areaFormulario{
+      margin:auto;
+      width: 100%;
+      height: 770px;
+      background-color: rgba(0, 0, 0, 0.1) !important;
+      background-image: url("undraw_good_doggy_4wfq.svg");
+      background-blend-mode: color;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+}

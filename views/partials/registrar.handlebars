@@ -1,0 +1,93 @@
+<div class="accordion tamanhoAcord" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Cadastrar Animal Perdido 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+          <form class="formulario" action = "/perfil/registrar/animalPerdido" method = "post" enctype="multipart/form-data">
+            <div class="btn-group btn-group-toggle my-4" data-toggle="buttons" id="groupButton">
+                <label class="btn btn-secondary tamanhoButton active">Cachorro
+                    <input name="especie" value="cachorro" type="radio" name="options" id="cachorro" autocomplete="off" checked>
+                </label>
+                <label class="btn btn-secondary tamanhoButton">Gato
+                    <input name="especie" value="gato" type="radio" name="options" id="gato" autocomplete="off">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input name="cor" class="form-control" type="input" placeholder="Cor" id="cor" required>
+            </div>
+            <div class="form-group">
+                <input name="porte" class="form-control" type="input" placeholder="Porte" id="porte" required>
+            </div>
+            <div class="form-group">
+                <input name="desc" class="form-control" type="input" placeholder="Descrição" id="desc">
+            </div>
+            <div class="form-group">
+                <input name="localizacao" class="form-control" type="input" placeholder="Localizacao" id="localizacao" required>
+            </div>
+            <div class="form-group">
+                <input name="data" class="form-control" type="date" placeholder="Data" id="data" required>
+            </div>
+            <div class="form-group">
+                <input name="foto" type="file" class="btn btn-secondary form-control" data-show-preview="false">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success tamanhoBotaoRegistro" type="submit" id="btnRegistrarEncontrado">Registrar animal</button>
+            </div>
+        </form>
+          
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Cadastrar Animal Encontrado 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+          <form class="formulario" action = "/perfil/registrar/animalEncontrado" method = "post" enctype="multipart/form-data">
+            <div class="btn-group btn-group-toggle my-4" data-toggle="buttons" id="groupButton">
+                <label class="btn btn-secondary tamanhoButton active">Cachorro
+                    <input name="especie" value="cachorro" type="radio" name="options" id="cachorro" autocomplete="off" checked>
+                </label>
+                <label class="btn btn-secondary tamanhoButton">Gato
+                    <input name="especie" value="gato" type="radio" name="options" id="gato" autocomplete="off">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input name="cor" class="form-control" type="input" placeholder="Cor" id="cor" required>
+            </div>
+            <div class="form-group">
+                <input name="porte" class="form-control" type="input" placeholder="Porte" id="porte" required>
+            </div>
+            <div class="form-group">
+                <input name="desc" class="form-control" type="input" placeholder="Descrição" id="desc">
+            </div>
+            <div class="form-group">
+                <input name="localizacao" class="form-control" type="input" placeholder="Localizacao" id="localizacao" required>
+            </div>
+            <div class="form-group">
+                <input name="data" class="form-control" type="date" placeholder="Data" id="data" required>
+            </div>
+            <div class="form-group">
+                <input name="foto" type="file" class="btn btn-secondary form-control" data-show-preview="false">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success tamanhoBotaoRegistro" type="submit" id="btnRegistrarEncontrado">Registrar animal</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

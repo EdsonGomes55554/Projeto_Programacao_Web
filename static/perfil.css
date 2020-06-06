@@ -1,0 +1,191 @@
+:root{
+    font-size: 16px;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    background-color: #343a40;
+}
+
+.tamanhoButton{
+    width: 100px;
+}
+
+.conteudo{
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.perfil{
+
+    height: 100vh;
+    display: block;
+    top: 0;
+    position: sticky !important;
+
+
+
+    width: 350px;
+    background-color: rgb(241, 241, 241);
+    border-top: 1px solid rgba(31, 31, 31, 0.2);
+    border-bottom: 1px solid rgba(31, 31, 31, 0.2);
+    border-right: 1px solid rgba(31, 31, 31, 0.1);
+}
+
+.acoes{
+    width: calc(100% - 350px);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: center;
+}
+
+.foto {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+}
+
+.foto img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(to bottom,  #696e74,  #343a40);
+}
+
+.info{
+    margin-bottom: 30px;
+}
+
+.nome{
+    text-align: center;
+}
+
+.emblemas{
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #343a40;
+    border-radius: 20px;
+}
+
+.emblemas svg{
+    margin: 10px 0px;
+}
+
+.perfil-menu{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.perfil-menu a{
+    text-decoration: none;
+    color: #343a40;
+}
+
+.item-menu{
+    width: 100%;
+    color: #343a40;
+}
+
+.icon{
+    display: inline-block;
+}
+
+.item-menu svg{
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.ativo{
+    background-color: #343a40;
+    color: white;
+    border-left: 5px solid #7e8388;
+    margin-left: -5px;
+}
+
+.ativo a{
+    color: white;
+}
+  
+.item-menu:hover{
+    background-color: #fafcfd;
+    color: #8e969c;
+    border-left: 5px solid black;
+    margin-left: -5px;
+}
+
+.ativo:hover{
+    background-color: #343a40;
+    color: #8e969c;
+    border-left: 5px solid rgb(133, 133, 133);
+    margin-left: -5px;
+}
+
+.emblema{
+    display: inline-block;
+}
+
+.formulario{
+    margin: 100px auto;
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.tamanhoAcord{
+    width: 100%;
+}
+
+.tamanhoBotaoRegistro{
+    width: 200px;
+    margin: 30px auto;
+}
+
+.blockAnimal{
+    display: grid;
+    column-gap: 5%;
+    grid-template-columns: 30% 30% 30%;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.blockAnimal img{
+    object-fit: cover;
+    height: 300px;
+}
+
+
+@media (max-width: 991px){
+    .conteudo{
+        flex-direction: column;
+    }
+    .perfil{
+        position: relative !important;
+        width: 100%;
+        height: 100%;
+    }
+    .acoes{
+        width: 100%;
+        height: 100%;
+    }
+    .formulario{
+        margin-top: 20px;
+        width: 80%;
+    }
+    .blockAnimal{
+        display: block;
+        width: 100%;
+    }
+}

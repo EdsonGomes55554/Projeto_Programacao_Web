@@ -1,0 +1,28 @@
+{
+  "name": "cade_meu_pet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": " nodemon server.js"
+  },
+  "author": "Edson Gomes Martinelli e Rafael Akio Shishito Matos",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^1.1.3",
+    "@googlemaps/google-maps-services-js": "^3.0.0",
+    "connect-mongodb-session": "^2.3.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "google-maps": "^4.2.3",
+    "googlemaps": "^1.12.0",
+    "mongodb": "^3.5.8",
+    "multiparty-express": "^0.1.9",
+    "require-from-url": "^3.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,42 @@
+
+<div class="blockAnimal">
+
+{{#each perdidos}}
+  <div class="card mb-3 tamanhoAnimal">
+    <img src="/updates/{{this.foto}}" class="card-img-top " alt="...">
+    <div class="card-body">
+      <p class="card-text">
+        <div>
+          <p class="btn btn-secondary btn-sm">Perdido</p>
+        </div>
+        Descrição: {{this.desc}}
+      </p>
+      <div>
+          <a href="/perfil/animais/remover?id={{this.id}}&classe=perdidos" type="button" class="btn btn-danger">Deletar</a>
+      </div>
+    </div>
+  </div>
+{{/each}}
+
+{{#each encontrados}}
+  <div class="card mb-3 tamanhoAnimal">
+    <img src="/updates/{{this.foto}}" class="card-img-top " alt="...">
+    <div class="card-body">
+      <p class="card-text">
+        <div>
+          <p class="btn btn-warning btn-sm">Encontrado</p>
+        </div>
+        Descrição: {{this.desc}}
+      </p>
+      <div>
+          <a href="/perfil/animais/remover?id={{this.id}}&classe=encontrados" type="button" class="btn btn-danger">Deletar</a>
+      </div>
+    </div>
+  </div>
+{{/each}}
+
+</div>
+
+
+
+
