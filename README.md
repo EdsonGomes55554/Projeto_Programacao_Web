@@ -3,5 +3,5 @@ Projeto para disciplina de Programação para Web na Universidade Federal do ABC
 
 # Formas de uso
 Adicione o arquivo config.json à raiz do projeto e execute utilizando:
--nodemon : npm run dev;
--node : node server.js;
+* nodemon : npm run dev;
+* node : node server.js;
