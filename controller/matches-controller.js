@@ -41,7 +41,6 @@ function matchingPerdido(perfilPerdido) {
                         calcularDist(encontrado.local, perfilPerdido.local, (dist) => {
                             if(dist != -1) {
                                 if(dist <= 7000) {
-                                    console.log(encontrado.id);
                                     registrarMatch(perfilPerdido.email, perfilPerdido.id, encontrado.email, encontrado.id);
                                 }
                             } else {
