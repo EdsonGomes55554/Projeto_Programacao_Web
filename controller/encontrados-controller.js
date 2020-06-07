@@ -52,7 +52,8 @@ function renderizarEspecie(res, especie) {
                                 animais: animais,
                                 raca: raca,
                                 cor: cor,
-                                porte: porte});
+                                porte: porte,
+                                apiKey: confMaps.apiKey});
     });
 }
 
@@ -92,7 +93,8 @@ function filtrarEncontrados(req, res) {
                                 animais: newAnimais,
                                 raca: raca,
                                 cor: cor,
-                                porte: porte});
+                                porte: porte,
+                                apiKey: confMaps.apiKey});
     });
 }
 
