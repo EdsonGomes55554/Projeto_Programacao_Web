@@ -1,6 +1,12 @@
 window.addEventListener("load", function() {
     let markers = [];
-    let map;
+    var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -23.644, lng: -46.528},
+          zoom: 10
+        });
+    }
 
     centralizarMapa("Santo André");
     carregarMarkers();
