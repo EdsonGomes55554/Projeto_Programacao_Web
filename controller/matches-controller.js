@@ -54,7 +54,6 @@ function matchingPerdido(perfilPerdido) {
 }
 
 function registrarMatch(emailPerdido, idPerdido, emailEncontrado, idEncontrado) {
-    console.log(idEncontrado);
     let match = new modeloMatch.perfilMatch ( emailPerdido,
                                               idPerdido,
                                               emailEncontrado,
